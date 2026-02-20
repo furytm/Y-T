@@ -7,34 +7,34 @@ import { Eye, Ear, Hand, Heart } from 'lucide-react'
 const services = [
   {
     id: 1,
-    title: 'Visual Identity',
-    description: 'Craft compelling visual experiences that resonate with your audience',
+    title: 'Sensory Room Design',
+    description: 'Custom-designed calming and therapeutic sensory rooms for schools, homes, clinics, and therapy centres with personalized lighting, sound control, and textures.',
     icon: Eye,
     image: '/images/visual-harmony.jpg',
     color: 'from-primary',
   },
   {
     id: 2,
-    title: 'Sound Design',
-    description: 'Create sonic landscapes that enhance brand perception and memory',
-    icon: Ear,
-    image: '/images/sound-waves.jpg',
+    title: 'Inclusive Architecture',
+    description: 'Universal design assessments and architectural renovations supporting accessibility, mobility needs, and sensory-friendly layouts.',
+    icon: Hand,
+    image: '/images/sensory-touch.jpg',
     color: 'from-accent',
   },
   {
     id: 3,
-    title: 'Tactile Experience',
-    description: 'Design touch-based interactions that create lasting impressions',
-    icon: Hand,
-    image: '/images/sensory-touch.jpg',
+    title: 'Workplace Accessibility',
+    description: 'Transforming office environments with quiet rooms, sensory-safe meeting spaces, and adaptive lighting for neurodiverse employees.',
+    icon: Heart,
+    image: '/images/brand-connection.jpg',
     color: 'from-secondary',
   },
   {
     id: 4,
-    title: 'Brand Connection',
-    description: 'Build emotional bonds through integrated sensory strategies',
-    icon: Heart,
-    image: '/images/brand-connection.jpg',
+    title: 'Assistive Technology',
+    description: 'Integration of smart adaptive lighting, sensory-trigger systems, and interactive panels that enhance accessibility and independence.',
+    icon: Ear,
+    image: '/images/sound-waves.jpg',
     color: 'from-primary',
   },
 ]
@@ -68,15 +68,15 @@ export default function Services() {
         {/* Section Header */}
         <div className="text-center mb-16 space-y-4">
           <div className="inline-block px-4 py-2 rounded-full bg-primary/10 border border-primary/30 backdrop-blur-sm">
-            <span className="text-sm font-medium bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+            <span className="crimson-text-regular text-sm font-medium bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               Our Services
             </span>
           </div>
-          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-foreground">
-            Multisensory Solutions
+          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-foreground crimson-text-bold">
+            Accessibility & Sensory Solutions
           </h2>
-          <p className="text-lg text-foreground/60 max-w-2xl mx-auto">
-            We specialize in creating comprehensive sensory strategies that elevate brands
+          <p className="crimson-text-regular text-lg text-foreground/60 max-w-2xl mx-auto">
+            We create inclusive environments designed with human-centered design, evidence-based sensory solutions, and global accessibility standards
           </p>
         </div>
 
@@ -103,6 +103,7 @@ export default function Services() {
                     src={service.image}
                     alt={service.title}
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 50vw"
                     className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-br from-foreground/80 via-foreground/60 to-transparent" />

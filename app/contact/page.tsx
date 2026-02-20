@@ -33,38 +33,44 @@ export default function ContactPage() {
       <Header />
       <main className="overflow-hidden">
         {/* Hero */}
-        <section className="pt-32 pb-16 md:pt-40 md:pb-24 bg-gradient-to-b from-background to-muted/50">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div className="animate-in fade-in slide-in-from-bottom-8 duration-700">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-foreground text-balance mb-6">
-                Get In Touch
+        <section className="relative min-h-screen md:min-h-[60vh] lg:min-h-screen flex items-center justify-start pt-24 md:pt-32 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: 'url(/images/contact-hero.jpg)' }}>
+          <div className="absolute inset-0 bg-black/30" />
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
+            <div className="max-w-2xl animate-in fade-in slide-in-from-bottom-8 duration-700">
+              <div className="inline-block px-4 py-2 rounded-full bg-white/20 border border-white/30 backdrop-blur-sm mb-6">
+                <span className="crimson-text-regular text-sm font-medium text-white">
+                  Get In Touch
+                </span>
+              </div>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white crimson-text-bold mb-6">
+                Let's Start a Conversation
               </h1>
-              <p className="text-lg md:text-xl text-foreground/70 max-w-2xl mx-auto">
-                Have a question or project in mind? We'd love to hear from you. Reach out and let's start a conversation.
+              <p className="crimson-text-regular text-lg md:text-xl text-white/90 leading-relaxed">
+                Have a question or project in mind? We'd love to hear from you. Reach out and let's discuss how we can help create an inclusive, sensory-friendly space for your organization.
               </p>
             </div>
           </div>
         </section>
 
         {/* Contact Section */}
-        <section className="py-20 md:py-32">
+        <section className="py-20 md:py-32 bg-gradient-to-b from-muted/30 to-background">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-3 gap-12 mb-16">
               {/* Contact Info Cards */}
-              <div className="animate-in fade-in slide-in-from-left duration-700 lg:col-span-1">
+              <div className="animate-in fade-in slide-in-from-left-8 duration-700 lg:col-span-1">
                 <div className="space-y-6">
                   {/* Phone */}
-                  <div className="bg-gradient-to-br from-muted to-muted/50 rounded-xl p-6 border border-border hover:border-primary/50 transition-all duration-300">
+                  <div className="animate-in fade-in slide-in-from-bottom-8 duration-700 bg-gradient-to-br from-muted to-muted/50 rounded-xl p-6 border border-border hover:border-primary/50 transition-all duration-300" style={{ animationDelay: '100ms' }}>
                     <div className="flex items-start gap-4">
                       <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center flex-shrink-0">
                         <Phone className="w-5 h-5 text-white" />
                       </div>
                       <div>
-                        <h3 className="font-semibold text-foreground mb-2">Phone</h3>
-                        <a href="tel:+234 803 312 0248" className="text-foreground/70 hover:text-primary transition-colors block">
+                        <h3 className="crimson-text-bold text-foreground mb-2">Phone</h3>
+                        <a href="tel:+234 803 312 0248" className="crimson-text-regular text-foreground/70 hover:text-primary transition-colors block">
                           +234 803 312 0248
                         </a>
-                        <a href="tel:+234 816 334 1762" className="text-foreground/70 hover:text-primary transition-colors block">
+                        <a href="tel:+234 816 334 1762" className="crimson-text-regular text-foreground/70 hover:text-primary transition-colors block">
                           +234 816 334 1762
                         </a>
                       </div>
@@ -72,20 +78,20 @@ export default function ContactPage() {
                   </div>
 
                   {/* Email */}
-                  <div className="bg-gradient-to-br from-muted to-muted/50 rounded-xl p-6 border border-border hover:border-primary/50 transition-all duration-300">
+                  <div className="animate-in fade-in slide-in-from-bottom-8 duration-700 bg-gradient-to-br from-muted to-muted/50 rounded-xl p-6 border border-border hover:border-primary/50 transition-all duration-300" style={{ animationDelay: '200ms' }}>
                     <div className="flex items-start gap-4">
                       <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center flex-shrink-0">
                         <Mail className="w-5 h-5 text-white" />
                       </div>
                       <div>
-                        <h3 className="font-semibold text-foreground mb-2">Email</h3>
-                        <a href="mailto:enada@yandtdesgns.com" className="text-foreground/70 hover:text-primary transition-colors block text-sm">
+                        <h3 className="crimson-text-bold text-foreground mb-2">Email</h3>
+                        <a href="mailto:enada@yandtdesgns.com" className="crimson-text-regular text-foreground/70 hover:text-primary transition-colors block text-sm">
                           enada@yandtdesgns.com
                         </a>
-                        <a href="mailto:bukky@yandtdesigns.com" className="text-foreground/70 hover:text-primary transition-colors block text-sm">
+                        <a href="mailto:bukky@yandtdesigns.com" className="crimson-text-regular text-foreground/70 hover:text-primary transition-colors block text-sm">
                           bukky@yandtdesigns.com
                         </a>
-                        <a href="mailto:info@yandtdesigns.com" className="text-foreground/70 hover:text-primary transition-colors block text-sm">
+                        <a href="mailto:info@yandtdesigns.com" className="crimson-text-regular text-foreground/70 hover:text-primary transition-colors block text-sm">
                           info@yandtdesigns.com
                         </a>
                       </div>
@@ -93,19 +99,15 @@ export default function ContactPage() {
                   </div>
 
                   {/* Address */}
-                  <div className="bg-gradient-to-br from-muted to-muted/50 rounded-xl p-6 border border-border hover:border-primary/50 transition-all duration-300">
+                  <div className="animate-in fade-in slide-in-from-bottom-8 duration-700 bg-gradient-to-br from-muted to-muted/50 rounded-xl p-6 border border-border hover:border-primary/50 transition-all duration-300" style={{ animationDelay: '300ms' }}>
                     <div className="flex items-start gap-4">
                       <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center flex-shrink-0">
                         <MapPin className="w-5 h-5 text-white" />
                       </div>
                       <div>
-                        <h3 className="font-semibold text-foreground mb-2">Address</h3>
-                        <p className="text-foreground/70 text-sm leading-relaxed">
-                          5 Primrose Street<br />
-                          Northern Foreshore Estate<br />
-                          Off Chevron Drive<br />
-                          Lekki, Lagos<br />
-                          Nigeria
+                        <h3 className="crimson-text-bold text-foreground mb-2">Address</h3>
+                        <p className="crimson-text-regular text-foreground/70 text-sm leading-relaxed">
+                          Lagos, Nigeria
                         </p>
                       </div>
                     </div>
@@ -228,7 +230,7 @@ export default function ContactPage() {
 
         {/* CTA */}
         <section className="py-20 md:py-32 bg-gradient-to-r from-primary/10 via-secondary/10 to-primary/10">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-in fade-in slide-in-from-bottom-8 duration-700">
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-6">
               Ready for a Consultation?
             </h2>

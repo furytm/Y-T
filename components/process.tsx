@@ -6,29 +6,29 @@ import { Lightbulb, Users, Zap, Rocket } from 'lucide-react'
 const steps = [
   {
     number: '01',
-    title: 'Discover',
-    description: 'Deep dive into your brand, audience, and sensory landscape to uncover unique opportunities',
+    title: 'Assess',
+    description: 'We understand your needs, space constraints, user profiles, and accessibility requirements through detailed consultation and site analysis.',
     icon: Lightbulb,
     color: 'bg-primary',
   },
   {
     number: '02',
-    title: 'Strategize',
-    description: 'Develop a comprehensive multisensory strategy tailored to your brand objectives',
+    title: 'Design',
+    description: 'Our team creates human-centred designs with evidence-based sensory solutions, considering lighting, materials, textures, and spatial layout.',
     icon: Users,
     color: 'bg-accent',
   },
   {
     number: '03',
-    title: 'Create',
-    description: 'Design and craft immersive experiences that bring the strategy to life',
+    title: 'Implement',
+    description: 'We source sustainable materials, install systems (lighting, audio, textures), and ensure AODA and global accessibility compliance.',
     icon: Zap,
     color: 'bg-secondary',
   },
   {
     number: '04',
-    title: 'Activate',
-    description: 'Launch and optimize your sensory experience, measuring impact and engagement',
+    title: 'Support',
+    description: 'Post-launch training for staff, ongoing consultation, and adjustments ensure the space continues to support user wellbeing.',
     icon: Rocket,
     color: 'bg-primary',
   },
@@ -69,15 +69,15 @@ export default function Process() {
         {/* Section Header */}
         <div className="text-center mb-20 space-y-4 opacity-0 animate-in fade-in duration-1000">
           <div className="inline-block px-4 py-2 rounded-full bg-primary/10 border border-primary/30 backdrop-blur-sm">
-            <span className="text-sm font-medium bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+            <span className="crimson-text-regular text-sm font-medium bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               Our Process
             </span>
           </div>
-          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-foreground">
-            From Vision to Reality
+          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-foreground crimson-text-bold">
+            Our Design Process
           </h2>
-          <p className="text-lg text-foreground/60 max-w-2xl mx-auto">
-            A structured approach to creating transformative sensory experiences
+          <p className="crimson-text-regular text-lg text-foreground/60 max-w-2xl mx-auto">
+            From assessment to ongoing support, we create inclusive spaces that truly serve your users
           </p>
         </div>
 
@@ -158,10 +158,10 @@ export default function Process() {
         {/* Bottom CTA */}
         <div className="mt-20 text-center opacity-0 animate-in fade-in slide-in-from-bottom duration-700 delay-700">
           <p className="text-lg text-foreground/60 mb-6">
-            Ready to transform your brand experience?
+            Ready to create an inclusive, sensory-friendly space?
           </p>
-          <button className="group px-10 py-4 rounded-full bg-gradient-to-r from-primary to-secondary text-white font-semibold hover:shadow-2xl hover:shadow-primary/40 transition-all duration-300 transform hover:scale-105 inline-flex items-center space-x-2">
-            <span>Start Your Journey</span>
+          <button className="group px-10 py-4 rounded-full bg-gradient-to-r from-primary to-secondary text-white crimson-text-bold hover:shadow-2xl hover:shadow-primary/40 transition-all duration-300 transform hover:scale-105 inline-flex items-center space-x-2">
+            <span>Book a Consultation</span>
             <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
           </button>
         </div>

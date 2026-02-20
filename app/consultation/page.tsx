@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import Header from '@/components/header'
 import Footer from '@/components/footer'
 import { Mail, Phone, MapPin, Clock } from 'lucide-react'
@@ -36,33 +37,39 @@ export default function ConsultationPage() {
       <Header />
       <main className="overflow-hidden">
         {/* Hero */}
-        <section className="pt-32 pb-16 md:pt-40 md:pb-24 bg-gradient-to-b from-background to-muted/50">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div className="animate-in fade-in slide-in-from-bottom-8 duration-700">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-foreground text-balance mb-6">
-                Book a Consultation
+        <section className="relative min-h-screen md:min-h-[60vh] lg:min-h-screen flex items-center justify-start pt-24 md:pt-32 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: 'url(/images/consultation-hero.jpg)' }}>
+          <div className="absolute inset-0 bg-black/40" />
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
+            <div className="max-w-2xl animate-in fade-in slide-in-from-bottom-8 duration-700">
+              <div className="inline-block px-4 py-2 rounded-full bg-white/20 border border-white/30 backdrop-blur-sm mb-6">
+                <span className="crimson-text-regular text-sm font-medium text-white">
+                  Consultation
+                </span>
+              </div>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white crimson-text-bold mb-6">
+                Book Your Consultation
               </h1>
-              <p className="text-lg md:text-xl text-foreground/70 max-w-2xl mx-auto">
-                Let's discuss your vision and explore how our sensory design expertise can bring your project to life.
+              <p className="crimson-text-regular text-lg md:text-xl text-white/90 leading-relaxed">
+                Let's discuss your accessibility needs and explore how we can create an inclusive, sensory-friendly environment for your organisation or community.
               </p>
             </div>
           </div>
         </section>
 
         {/* Consultation Section */}
-        <section className="py-20 md:py-32">
+        <section className="py-20 md:py-32 bg-gradient-to-b from-muted/30 to-background">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-stretch">
               {/* Form */}
-              <div className="animate-in fade-in slide-in-from-left duration-700">
+              <div className="animate-in fade-in slide-in-from-left-8 duration-700">
                 <div className="bg-gradient-to-br from-background to-muted/50 rounded-2xl border border-border p-8 md:p-10">
-                  <h2 className="text-2xl font-serif font-bold text-foreground mb-8">
-                    Tell Us About Your Project
+                  <h2 className="text-2xl font-serif font-bold text-foreground mb-8 crimson-text-bold">
+                    Start Your Consultation
                   </h2>
 
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+                      <label htmlFor="name" className="crimson-text-bold block text-sm font-medium text-foreground mb-2">
                         Full Name *
                       </label>
                       <input
@@ -136,10 +143,11 @@ export default function ConsultationPage() {
                         className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-200"
                       >
                         <option value="">Select a project type</option>
-                        <option value="brand-development">Brand Development & Strategy</option>
-                        <option value="sensory-experience">Sensory Experience Design</option>
-                        <option value="space-design">Interior & Space Design</option>
-                        <option value="consulting">Design Consulting</option>
+                        <option value="sensory-room">Sensory Room Design</option>
+                        <option value="inclusive-design">Inclusive Architectural Design</option>
+                        <option value="workplace-accessibility">Workplace Accessibility</option>
+                        <option value="training">Training & Awareness Programs</option>
+                        <option value="assessment">Universal Design Assessment</option>
                         <option value="other">Other</option>
                       </select>
                     </div>
@@ -156,7 +164,7 @@ export default function ConsultationPage() {
                         required
                         rows={6}
                         className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-200 resize-none"
-                        placeholder="Tell us about your project, vision, and goals..."
+                        placeholder="Tell us about your space, accessibility needs, user groups, and goals..."
                       />
                     </div>
 

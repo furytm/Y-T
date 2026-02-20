@@ -5,22 +5,22 @@ import { Facebook, Instagram, Linkedin, Twitter } from 'lucide-react'
 
 const footerLinks = {
   Services: [
-    { name: 'Visual Design', href: '#' },
-    { name: 'Sound Branding', href: '#' },
-    { name: 'Experience Design', href: '#' },
-    { name: 'Strategy', href: '#' },
+    { name: 'Sensory Room Design', href: '/services' },
+    { name: 'Design Solutions', href: '/design-solutions' },
+    { name: 'Training Programs', href: '/training' },
+    { name: 'Consultations', href: '/consultation' },
   ],
   Company: [
-    { name: 'About Us', href: '#' },
-    { name: 'Our Team', href: '#' },
-    { name: 'Careers', href: '#' },
-    { name: 'Contact', href: '#' },
+    { name: 'About Us', href: '/about' },
+    { name: 'Our Approach', href: '/about' },
+    { name: 'Projects', href: '/projects' },
+    { name: 'Contact', href: '/contact' },
   ],
   Resources: [
-    { name: 'Blog', href: '#' },
-    { name: 'Case Studies', href: '#' },
-    { name: 'Guides', href: '#' },
-    { name: 'Insights', href: '#' },
+    { name: 'Design Services', href: '/design-solutions' },
+    { name: 'Case Studies', href: '/projects' },
+    { name: 'Training', href: '/training' },
+    { name: 'Accessibility', href: '/design-solutions' },
   ],
 }
 
@@ -58,8 +58,8 @@ export default function Footer() {
                 Sensory
               </span>
             </Link>
-            <p className="text-sm text-foreground/60 leading-relaxed">
-              Transforming brands through immersive sensory experiences. Creating meaningful human connections.
+            <p className="crimson-text-regular text-foreground/60 leading-relaxed">
+              Creating inclusive, accessible, and sustainable environments for individuals with sensory, developmental, and physical disabilities.
             </p>
             <div className="flex items-center space-x-4">
               {socialLinks.map(({ icon: Icon, href, label }) => (
@@ -78,13 +78,13 @@ export default function Footer() {
           {/* Links Columns */}
           {Object.entries(footerLinks).map(([category, links]) => (
             <div key={category} className="space-y-4">
-              <h4 className="font-semibold text-foreground">{category}</h4>
+              <h4 className="crimson-text-bold text-foreground">{category}</h4>
               <ul className="space-y-3">
                 {links.map((link) => (
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="text-sm text-foreground/60 hover:text-primary transition-colors duration-200 relative group"
+                      className="crimson-text-regular text-foreground/60 hover:text-primary transition-colors duration-200 relative group"
                     >
                       {link.name}
                       <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300" />
@@ -101,12 +101,12 @@ export default function Footer() {
 
         {/* Bottom Footer */}
         <div className="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
-          <div className="text-sm text-foreground/50">
+          <div className="crimson-text-regular text-foreground/50">
             <p>&copy; 2024 Y&T Sensory. All rights reserved.</p>
           </div>
 
           <div className="flex items-center space-x-8">
-            <Link href="#" className="text-sm text-foreground/50 hover:text-primary transition-colors duration-200">
+            <Link href="#" className="crimson-text-regular text-foreground/50 hover:text-primary transition-colors duration-200">
               Privacy Policy
             </Link>
             <Link href="#" className="text-sm text-foreground/50 hover:text-primary transition-colors duration-200">
